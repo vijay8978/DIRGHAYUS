@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIRGHAYUS | Buy at your store</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .button {
+            padding: 10px 20px;
+            margin-top: 535px;
+            background-color: #43f912;
+            color:  #fb462d;
+            font-family: verdana;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .button:hover {
+            background-color: #27e7b3;
+        }
+        .logo {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            width: 150px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted class="video-background" id="backgroundVideo">
+        <source src="./videos/DIRGHAYUS.mp4" type="video/mp4" style="width=600px">
+        Your browser does not support the video tag.
+    </video>
+
+    <img src="img/logo.png" alt="Logo" class="logo">
+
+    <div class="content">
+        <button class="button" onclick="navigateToPage()">WELCOME TO DIRGHAYUS</button>
+    </div>
+
+    <script>
+
+         function navigateToPage() {
+     window.location.href = 'index.html'; // Change to your target page
+   };
+
+        const video = document.getElementById('backgroundVideo');
+        video.onended = function() {
+            window.location.href = './index.html'; // Redirect to index.html
+        };
+    </script>
+
+</body>
+</html>
